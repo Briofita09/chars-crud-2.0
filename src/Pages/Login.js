@@ -22,7 +22,6 @@ export default function Login() {
     axios
       .post(`${uri}/login`, user)
       .then((res) => {
-        //console.log(res.data.token);
         setToken(res.data.token);
         navigate("/chars");
       })
@@ -57,7 +56,7 @@ export default function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button className="btn btn-primary w-25 mb-3 mt-3">Cadastrar</button>
+        <button className="btn btn-primary w-25 mb-3 mt-3">Entrar</button>
       </form>
       <Link to="/" className="text-reset text-decoration-none">
         <h3 className="mt-5">
